@@ -19,15 +19,20 @@
     margin: 0;
 }
 
-/* This is friendlier for mobile than using 100vh on the body. The reason this is so has to do with the navigation that appears and disappears on mobile. */
-html, body {
-    max-height: 100%;
-    /* height: 100%; */
-}
-
 html:focus-within {
     scroll-behavior: smooth;
 }
+
+/* This is friendlier for mobile than using 100vh on the body. The reason this is so has to do with the navigation that appears and disappears on mobile. This also enables percentage based heights for children of the body. */
+html, body {
+    height: 100%;
+}
+
+/* This is what Andy Bell does, and doesn't do the above */
+/* body {
+    min-height: 100vh;
+} */
+
 
 body {
     line-height: 1.6;
