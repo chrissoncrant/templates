@@ -54,6 +54,11 @@ select {
     font: inherit;
 }
 
+/* To update the focus styling: */
+/* :focus-visible {
+    outline: blue 3px solid;
+} */
+
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;

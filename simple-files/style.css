@@ -30,6 +30,11 @@ select {
     font: inherit;
 }
 
+/* To update the focus styling: */
+/* :focus-visible {
+    outline: blue 3px solid;
+} */
+
 ol, ul {
     list-style: none;
     padding: 0;
