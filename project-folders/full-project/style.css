@@ -1,0 +1,213 @@
+/* ############### GLOBAL STYLES ############### */
+
+/* Source: https://andy-bell.co.uk/a-more-modern-css-reset/ */
+
+:root {
+    /* Colors */
+    --color-dark: #050505;
+    --color-darkish: #404040;
+    --color-lightish: #e6e6e6;
+    --color-light: #fafafa;
+    --color-mid: grey;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+
+    /* Modal Sizing Scale */
+    --ratio: 1.5;
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio));
+    --s-3: calc(var(--s-2) / var(--ratio));
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+
+    /* Text and Font */
+    --font-plain: Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-serif: Georgia, serif;
+    --font-special: Barlow Condensed, Helvetica, sans-serif;
+    --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
+    --measure: 65ch;
+    --line-height: var(--ratio);
+    --line-height-small: calc(0.8*var(--ratio));
+    line-height: var(--ratio);
+    /* font-size: calc(.333vw + 1em); */
+    font-size: 1rem;
+    font-family: var(--font-plain);
+
+    /* Borders */
+    --border-thin: var(--s-5);
+    --border-thick: var(--s-2);
+
+    /* Padding */
+    --padding-large: var(--s5);
+    --padding-normal: var(--s0);
+    --padding-small: var(--s-3);
+}
+
+/* ############### CSS RESETS ############### */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    max-inline-size: var(--measure);
+}
+
+html,
+body,
+div,
+header,
+nav,
+ul,
+main,
+section,
+footer,
+h1,
+h2,
+.box-separator>* {
+    max-inline-size: none;
+}
+
+/* Reset all margins */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+    cursor: pointer;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* NEW CSS BELOW */
+h2 {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+#reel>.box {
+    min-width: 300px;
+}
+
+.top-link {
+    text-align: center;
+}
+
+#fixedElementButton {
+    padding: var(--s1);
+    border: solid var(--s-2) var(--color-dark);
+    border-radius: var(--s3);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    cursor: pointer;
+}
+
+#fixedElementButton:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+#fixedElement {
+    background-color: var(--color-darkish);
+    color: var(--color-light);
+    display: none;
+    text-align: center;
+    padding: var(--s3);
+}
